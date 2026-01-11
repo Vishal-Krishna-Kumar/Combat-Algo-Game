@@ -68,7 +68,8 @@ Dependencies are listed in `requirements.txt`.
 ```bash
 git clone https://github.com/Vishal-Krishna-Kumar/Combat-Algo-Game.git
 cd Combat-Algo-Game
-2) Create and activate virtual environment
+
+###2) Create and activate virtual environment
 
 Windows (PowerShell):
 
