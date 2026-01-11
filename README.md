@@ -69,26 +69,22 @@ Dependencies are listed in `requirements.txt`.
 git clone https://github.com/Vishal-Krishna-Kumar/Combat-Algo-Game.git
 cd Combat-Algo-Game
 
-2) Create & activate virtual environment
 
-Windows (PowerShell)
+### 2) Create & activate virtual environment
 
+#### Windows (PowerShell)
+```powershell
 py -3.11 -m venv venv
 .\venv\Scripts\Activate.ps1
 
 
-macOS / Linux
-
-python3 -m venv venv
-source venv/bin/activate
-
-3) Install dependencies
+###3) Install dependencies
 pip install -r requirements.txt
 
-4) Run the game
+###4) Run the game
 python main.py
 
-🏗 Build Windows EXE (Optional)
+###🏗 Build Windows EXE (Optional)
 1) Install PyInstaller
 pip install pyinstaller
 
