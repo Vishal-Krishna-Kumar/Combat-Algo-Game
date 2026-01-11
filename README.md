@@ -91,9 +91,13 @@ py -3.11 -m venv venv
 pip install -r requirements.txt
 ```
 
+
 ```bash
 ###4) Run the game
 python main.py
+
+```
+
 
 ###🏗 Build Windows EXE (Optional)
 1) Install PyInstaller
@@ -110,7 +114,6 @@ dist/main/main.exe
 
 If you have folders like sounds/, textures/, or sprites/, include them with --add-data.
 
-```
 
 ```bash
 
@@ -127,8 +130,8 @@ Combat-Algo-Game/
 └── ...
 ```
 
-```bash
-⚙ How It Works
+
+###⚙ How It Works
 Ray-Casting Engine
 
 The game renders a 3D-like world by casting rays from the player’s viewpoint and computing wall intersections, similar to DOOM and Wolfenstein-3D. This provides high performance with a classic FPS feel.
@@ -146,12 +149,10 @@ Avoid getting stuck
 Spawn Balancing
 
 The game limits how many enemies can appear at once to maintain fair gameplay and high performance.
-```
 
 
 
-```bash
-🛠 Troubleshooting
+###🛠 Troubleshooting
 
 pygame not found
 
@@ -172,8 +173,8 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```
 
 
-```bash
-🧭 Roadmap
+
+###🧭 Roadmap
 
 More enemy types & smarter AI
 
@@ -183,13 +184,6 @@ Improved UI (health, ammo, settings)
 
 Browser build (WebAssembly via pygbag)```
 
-```bash
-bash speedrun.sh
-```
-
-```bash
-bash speedrun.sh
-```
 
 
 
