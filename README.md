@@ -11,154 +11,60 @@ A DOOM/Wolfenstein-inspired first-person shooter built in **Python** using **Pyg
 
 ---
 
-## Demo / Screenshots
+# Combat — DOOM-Style AI FPS Game (Python + Pygame)
 
-> Add screenshots here (recommended)
+A high-performance DOOM-style first-person shooter built in **Python** using **Pygame**, featuring **real-time ray-casting**, **AI-driven enemies**, **shortest-path navigation**, and **dynamic spawn balancing**.
 
-```md
+🎮 **Play / Download (Windows Build):**  
+https://vishalkrishna.itch.io/combat
 
-Features
-Core FPS Gameplay
-Algo Combat -style first-person movement with smooth camera rotation
+---
 
-Real-time raycasting renderer for 3D illusion
+## Features
 
-Weapon system + shooting mechanics
+### 🔫 Core FPS Gameplay
+- DOOM-style first-person movement with smooth mouse-controlled camera rotation  
+- Real-time ray-casting renderer for immersive 3D visuals  
+- Weapon system with responsive shooting mechanics  
+- Health, ammo, and pickups  
+- Mini-map with player and enemy tracking  
 
-Health / ammo / pickups (if included in your build)
+### 🤖 Enemy AI & Game Balancing
+- Enemies navigate the map using **shortest-path algorithms (A* pathfinding)**  
+- AI enemies actively **hunt and engage** the player  
+- Dynamic spawn balancing prevents too many enemies appearing at once  
+- Real-time enemy movement and combat updates  
 
-Mini-map with player + enemy tracking (if enabled)
+---
 
-Enemy AI & Game Balancing
-Enemies navigate the map using shortest-path logic (grid-based pathfinding such as A*)
+## Controls
 
-AI behavior designed to chase/engage the player intelligently
+| Action | Key |
+|------|-----|
+| Move Forward | **W** |
+| Move Backward | **S** |
+| Strafe Left | **A** |
+| Strafe Right | **D** |
+| Look / Aim | **Mouse** |
+| Shoot | **Space** |
+| Exit | **Esc** (if enabled) |
 
-Spawn balancing logic prevents too many enemies spawning at once
+> Tip: You can play in fullscreen or windowed mode depending on your system.
 
-Real-time updates for enemy movement and combat interaction
+---
 
-Controls
-Action	Key
-Move Forward	W
-Move Backward	S
-Strafe Left	A
-Strafe Right	D
-Look / Aim	Mouse
-Shoot	Space
-Exit	Esc (if enabled)
+## Requirements
 
-Tip: Run the game in fullscreen/windowed depending on your project settings.
+- **Python 3.11+** (recommended)  
+- Windows / macOS / Linux (Windows works best with Pygame)  
 
-Requirements
-Python 3.11+ recommended
+Dependencies are listed in `requirements.txt`.
 
-Windows/macOS/Linux (Windows easiest for Pygame)
+---
 
-Install dependencies from requirements.txt.
+## How to Run (Local Development)
 
-How to Run (Local Development)
-1) Clone the repository
-bash
-Copy code
+### 1) Clone the repository
+```bash
 git clone https://github.com/Vishal-Krishna-Kumar/Combat-Algo-Game.git
 cd Combat-Algo-Game
-2) Create and activate virtual environment
-Windows (PowerShell):
-
-powershell
-Copy code
-py -3.11 -m venv venv
-.\venv\Scripts\Activate.ps1
-macOS / Linux:
-
-bash
-Copy code
-python3 -m venv venv
-source venv/bin/activate
-3) Install dependencies
-bash
-Copy code
-pip install -r requirements.txt
-4) Run the game
-bash
-Copy code
-python main.py
-Build Windows EXE (Optional)
-If you want to create a distributable build:
-
-1) Install PyInstaller
-bash
-Copy code
-pip install pyinstaller
-2) Build (recommended: folder-based build)
-powershell
-Copy code
-pyinstaller --noconfirm --windowed --onedir main.py --add-data "resources;resources"
-The output will be in:
-
-css
-Copy code
-dist/main/main.exe
-If you have other asset folders like sounds/, textures/, sprites/, include them using --add-data.
-
-Project Structure (Typical)
-This may vary depending on your files. Update names if needed.
-
-css
-Copy code
-Combat-Algo-Game/
-  main.py
-  requirements.txt
-  resources/
-    sounds/
-    sprites/
-    textures/
-  screenshots/
-  ...
-Technical Notes (How It Works)
-Raycasting Engine
-The game renders a 3D-like world by casting rays from the player’s viewpoint across the screen and computing wall intersections. This allows DOOM/Wolfenstein-style visuals while remaining computationally efficient.
-
-Pathfinding / Enemy AI
-Enemies move using shortest-path logic over a grid-based representation of the map. This helps them:
-
-Navigate around walls/obstacles
-
-Approach the player strategically
-
-Avoid getting stuck
-
-Spawn Balancing
-To keep gameplay fair and performant, spawn logic caps how many enemies can appear in a region at once. This avoids “enemy flooding” while maintaining challenge.
-
-Troubleshooting
-1) pygame not found
-Make sure venv is activated and dependencies installed:
-
-bash
-Copy code
-pip install -r requirements.txt
-2) Game runs but textures/sounds missing
-Make sure resources/ exists in the project root and paths are correct.
-If using a PyInstaller EXE, include --add-data "resources;resources" in the build command.
-
-3) PowerShell can’t activate venv
-Run once:
-
-powershell
-Copy code
-Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-Then:
-
-powershell
-Copy code
-.\venv\Scripts\Activate.ps1
-Roadmap (Optional)
-More enemy types / behaviors
-
-New levels and map editor support
-
-Improved UI (health/ammo, settings)
-
-Browser build (WASM) via pygbag (experimental)
