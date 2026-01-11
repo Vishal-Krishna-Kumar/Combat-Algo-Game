@@ -92,18 +92,6 @@ pip install -r requirements.txt
 ```
 
 ```bash
-bash speedrun.sh
-```
-
-```bash
-bash speedrun.sh
-```
-
-```bash
-bash speedrun.sh
-```
-
-
 ###4) Run the game
 python main.py
 
@@ -122,6 +110,10 @@ dist/main/main.exe
 
 If you have folders like sounds/, textures/, or sprites/, include them with --add-data.
 
+```
+
+```bash
+
 📁 Project Structure
 Combat-Algo-Game/
 │
@@ -133,7 +125,9 @@ Combat-Algo-Game/
 │   └── textures/
 ├── screenshots/
 └── ...
+```
 
+```bash
 ⚙ How It Works
 Ray-Casting Engine
 
@@ -152,7 +146,11 @@ Avoid getting stuck
 Spawn Balancing
 
 The game limits how many enemies can appear at once to maintain fair gameplay and high performance.
+```
 
+
+
+```bash
 🛠 Troubleshooting
 
 pygame not found
@@ -171,7 +169,10 @@ PowerShell can’t activate venv
 
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 .\venv\Scripts\Activate.ps1
+```
 
+
+```bash
 🧭 Roadmap
 
 More enemy types & smarter AI
@@ -180,4 +181,18 @@ New maps and level editor
 
 Improved UI (health, ammo, settings)
 
-Browser build (WebAssembly via pygbag)
+Browser build (WebAssembly via pygbag)```
+
+```bash
+bash speedrun.sh
+```
+
+```bash
+bash speedrun.sh
+```
+
+
+
+
+
+
