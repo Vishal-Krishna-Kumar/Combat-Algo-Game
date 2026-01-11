@@ -68,3 +68,108 @@ Dependencies are listed in `requirements.txt`.
 ```bash
 git clone https://github.com/Vishal-Krishna-Kumar/Combat-Algo-Game.git
 cd Combat-Algo-Game
+2) Create and activate virtual environment
+
+Windows (PowerShell):
+
+py -3.11 -m venv venv
+.\venv\Scripts\Activate.ps1
+
+
+macOS / Linux:
+
+python3 -m venv venv
+source venv/bin/activate
+
+3) Install dependencies
+pip install -r requirements.txt
+
+4) Run the game
+python main.py
+
+Build Windows EXE (Optional)
+
+If you want to create a distributable Windows build:
+
+1) Install PyInstaller
+pip install pyinstaller
+
+2) Build the game
+pyinstaller --noconfirm --windowed --onedir main.py --add-data "resources;resources"
+
+
+The executable will be created at:
+
+dist/main/main.exe
+
+
+If you have additional asset folders such as sounds/, textures/, or sprites/, include them using --add-data.
+
+Project Structure (Typical)
+Combat-Algo-Game/
+  main.py
+  requirements.txt
+  resources/
+    sounds/
+    sprites/
+    textures/
+  screenshots/
+
+Technical Notes
+Raycasting Engine
+
+The game renders a 3D-like world by casting rays from the player’s viewpoint and calculating wall intersections, similar to classic DOOM and Wolfenstein-3D. This approach gives a 3D illusion while remaining highly performant.
+
+Pathfinding & Enemy AI
+
+Enemies use grid-based shortest-path algorithms (A*) to:
+
+Navigate around walls and obstacles
+
+Chase the player intelligently
+
+Avoid getting stuck
+
+Spawn Balancing
+
+The game limits how many enemies can appear at once to prevent unfair gameplay and performance drops.
+
+Troubleshooting
+pygame not found
+
+Make sure your virtual environment is active and run:
+
+pip install -r requirements.txt
+
+Textures or sounds not loading
+
+Ensure the resources/ folder exists in the project root.
+If using a Windows EXE, include:
+
+--add-data "resources;resources"
+
+
+when building with PyInstaller.
+
+PowerShell cannot activate venv
+
+Run once:
+
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+
+Then:
+
+.\venv\Scripts\Activate.ps1
+
+Roadmap
+
+More enemy types and behaviors
+
+New levels and map editor support
+
+Improved UI (health, ammo, settings)
+
+Browser version (WebAssembly via pygbag)
+
+
