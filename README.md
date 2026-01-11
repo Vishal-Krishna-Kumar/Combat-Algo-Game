@@ -92,7 +92,8 @@ python main.py
 ```
 
 
-### 🏗  Build Windows EXE (Optional)
+
+🏗  Build Windows EXE (Optional)
 
 1) Install PyInstaller
 pip install pyinstaller
@@ -125,7 +126,7 @@ Combat-Algo-Game/
 ```
 
 
-###⚙ How It Works
+⚙ How It Works
 ###Ray-Casting Engine
 
 The game renders a 3D-like world by casting rays from the player’s viewpoint and computing wall intersections, similar to DOOM and Wolfenstein-3D. This provides high performance with a classic FPS feel.
@@ -166,7 +167,7 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 .\venv\Scripts\Activate.ps1
 
 
-###🧭 Roadmap
+🧭 Roadmap
 
 More enemy types & smarter AI
 
