@@ -16,14 +16,10 @@ A DOOM/Wolfenstein-inspired first-person shooter built in **Python** using **Pyg
 > Add screenshots here (recommended)
 
 ```md
-![Gameplay](screenshots/0.jpg)
-![Gameplay](screenshots/1.jpg)
-![Minimap](screenshots/2.jpg)
-(Upload more images to screenshots/ and update filenames.)
 
 Features
 Core FPS Gameplay
-DOOM-style first-person movement with smooth camera rotation
+Algo Combat -style first-person movement with smooth camera rotation
 
 Real-time raycasting renderer for 3D illusion
 
