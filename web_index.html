@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOOM-style Game Web</title>
+    <style>
+        body { background: #111; color: #fff; text-align: center; }
+        #game-canvas { background: #000; display: block; margin: 20px auto; }
+        .controls { margin: 20px; }
+        button { font-size: 1.2em; margin: 0 10px; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>DOOM-style Game (Web)</h1>
+    <div class="controls">
+        <button id="play-btn">Play</button>
+        <button id="pause-btn">Pause</button>
+        <button id="restart-btn">Play Again</button>
+    </div>
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script>
+        let pyodide = null;
+        let gameLoaded = false;
+        let gamePaused = false;
+        let gameStarted = false;
+
+        async function main() {
+            pyodide = await loadPyodide({ indexURL: "https://cdn.jsdelivr.net/pyodide/v0.25.0/full/" });
+            await pyodide.loadPackage(["pygame-ce"]);
+            // Fetch and run your main.py
+            const response = await fetch("main.py");
+            const code = await response.text();
+            pyodide.runPython(code);
+            gameLoaded = true;
+        }
+
+        document.getElementById("play-btn").onclick = async function() {
+            if (!gameLoaded) {
+                await main();
+            } else if (gamePaused) {
+                pyodide.runPython("resume_game()", { globals: pyodide.globals });
+                gamePaused = false;
+            }
+        };
+        document.getElementById("pause-btn").onclick = function() {
+            if (gameLoaded && !gamePaused) {
+                pyodide.runPython("pause_game()", { globals: pyodide.globals });
+                gamePaused = true;
+            }
+        };
+        document.getElementById("restart-btn").onclick = async function() {
+            if (gameLoaded) {
+                pyodide.runPython("restart_game()", { globals: pyodide.globals });
+                gamePaused = false;
+            } else {
+                await main();
+            }
+        };
+    </script>
+    <p style="margin-top:40px; color:#aaa;">Powered by Pyodide & pygame-ce</p>
+</body>
+</html>
