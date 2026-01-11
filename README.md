@@ -79,20 +79,20 @@ py -3.11 -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
-###3) Install dependencies
+### 3) Install dependencies
 ```bash
 
 pip install -r requirements.txt
 ```
 
-###4) Run the game
+### 4) Run the game
 ```bash
 python main.py
 
 ```
 
 
-###🏗 Build Windows EXE (Optional)
+### 🏗 Build Windows EXE (Optional)
 1) Install PyInstaller
 pip install pyinstaller
 
