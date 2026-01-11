@@ -82,15 +82,14 @@ py -3.11 -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
-
-```bash
 ###3) Install dependencies
+```bash
+
 pip install -r requirements.txt
 ```
 
-
-```bash
 ###4) Run the game
+```bash
 python main.py
 
 ```
@@ -167,8 +166,6 @@ PowerShell can’t activate venv
 
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 .\venv\Scripts\Activate.ps1
-```
-
 
 
 ###🧭 Roadmap
