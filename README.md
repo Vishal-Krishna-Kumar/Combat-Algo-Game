@@ -63,23 +63,46 @@ Dependencies are listed in `requirements.txt`.
 ---
 
 ## How to Run (Local Development)
+```bash
+bash speedrun.sh
+```
 
 ### 1) Clone the repository
 ```bash
 git clone https://github.com/Vishal-Krishna-Kumar/Combat-Algo-Game.git
 cd Combat-Algo-Game
+```
+
+
 
 
 ### 2) Create & activate virtual environment
 
 #### Windows (PowerShell)
-```powershell
+
+```bash
 py -3.11 -m venv venv
 .\venv\Scripts\Activate.ps1
+```
 
 
+```bash
 ###3) Install dependencies
 pip install -r requirements.txt
+```
+
+```bash
+bash speedrun.sh
+```
+
+```bash
+bash speedrun.sh
+```
+
+```bash
+bash speedrun.sh
+```
+
 
 ###4) Run the game
 python main.py
