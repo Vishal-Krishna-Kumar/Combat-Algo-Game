@@ -177,6 +177,13 @@ Improved UI (health, ammo, settings)
 
 Browser build (WebAssembly via pygbag)```
 
+Author
+
+Vishal Krishna Kumar
+GitHub: https://github.com/Vishal-Krishna-Kumar
+
+Itch.io: https://vishalkrishna.itch.io/combat
+
 
 
 
