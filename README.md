@@ -69,15 +69,15 @@ Dependencies are listed in `requirements.txt`.
 git clone https://github.com/Vishal-Krishna-Kumar/Combat-Algo-Game.git
 cd Combat-Algo-Game
 
-###2) Create and activate virtual environment
+2) Create & activate virtual environment
 
-Windows (PowerShell):
+Windows (PowerShell)
 
 py -3.11 -m venv venv
 .\venv\Scripts\Activate.ps1
 
 
-macOS / Linux:
+macOS / Linux
 
 python3 -m venv venv
 source venv/bin/activate
@@ -88,44 +88,43 @@ pip install -r requirements.txt
 4) Run the game
 python main.py
 
-Build Windows EXE (Optional)
-
-If you want to create a distributable Windows build:
-
+🏗 Build Windows EXE (Optional)
 1) Install PyInstaller
 pip install pyinstaller
 
-2) Build the game
+2) Build
 pyinstaller --noconfirm --windowed --onedir main.py --add-data "resources;resources"
 
 
-The executable will be created at:
+The game will be created at:
 
 dist/main/main.exe
 
 
-If you have additional asset folders such as sounds/, textures/, or sprites/, include them using --add-data.
+If you have folders like sounds/, textures/, or sprites/, include them with --add-data.
 
-Project Structure (Typical)
+📁 Project Structure
 Combat-Algo-Game/
-  main.py
-  requirements.txt
-  resources/
-    sounds/
-    sprites/
-    textures/
-  screenshots/
+│
+├── main.py
+├── requirements.txt
+├── resources/
+│   ├── sounds/
+│   ├── sprites/
+│   └── textures/
+├── screenshots/
+└── ...
 
-Technical Notes
-Raycasting Engine
+⚙ How It Works
+Ray-Casting Engine
 
-The game renders a 3D-like world by casting rays from the player’s viewpoint and calculating wall intersections, similar to classic DOOM and Wolfenstein-3D. This approach gives a 3D illusion while remaining highly performant.
+The game renders a 3D-like world by casting rays from the player’s viewpoint and computing wall intersections, similar to DOOM and Wolfenstein-3D. This provides high performance with a classic FPS feel.
 
-Pathfinding & Enemy AI
+Enemy Pathfinding
 
 Enemies use grid-based shortest-path algorithms (A*) to:
 
-Navigate around walls and obstacles
+Navigate around walls
 
 Chase the player intelligently
 
@@ -133,44 +132,33 @@ Avoid getting stuck
 
 Spawn Balancing
 
-The game limits how many enemies can appear at once to prevent unfair gameplay and performance drops.
+The game limits how many enemies can appear at once to maintain fair gameplay and high performance.
 
-Troubleshooting
+🛠 Troubleshooting
+
 pygame not found
-
-Make sure your virtual environment is active and run:
 
 pip install -r requirements.txt
 
-Textures or sounds not loading
 
-Ensure the resources/ folder exists in the project root.
-If using a Windows EXE, include:
+Textures or sounds missing
+Ensure resources/ exists.
+When building EXE, include:
 
 --add-data "resources;resources"
 
 
-when building with PyInstaller.
-
-PowerShell cannot activate venv
-
-Run once:
+PowerShell can’t activate venv
 
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-
-
-Then:
-
 .\venv\Scripts\Activate.ps1
 
-Roadmap
+🧭 Roadmap
 
-More enemy types and behaviors
+More enemy types & smarter AI
 
-New levels and map editor support
+New maps and level editor
 
 Improved UI (health, ammo, settings)
 
-Browser version (WebAssembly via pygbag)
-
-
+Browser build (WebAssembly via pygbag)
