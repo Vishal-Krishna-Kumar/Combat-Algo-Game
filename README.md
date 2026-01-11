@@ -62,10 +62,7 @@ Dependencies are listed in `requirements.txt`.
 
 ---
 
-## How to Run (Local Development)
-```bash
-bash speedrun.sh
-```
+
 
 ### 1) Clone the repository
 ```bash
