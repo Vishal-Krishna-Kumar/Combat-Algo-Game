@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> **About this repository**
+> The engine follows **[DOOM-style-Game](https://github.com/StanislavPetrovV/DOOM-style-Game)** by Stanislav Petrov, released under the MIT License: the ray-casting renderer, map, sprites, sound and the enemy pathfinding come from that project. My additions are the mini-map (`minimap.py`), pickups (`pickups.py`), the weapon manager (`weapon_manager.py`), spawn balancing and the Windows build.
+
+---
+
 # DOOM style 3d (raycasting) game in Python (based on Wolfenstein 3d)
 
 Control: 'WASD' + mouse
@@ -5,7 +11,7 @@ Control: 'WASD' + mouse
 ![doom](/sreenshots/0.jpg)
 # Combat — DOOM-Style 3D Raycasting FPS (Python + Pygame)
 
-A DOOM/Wolfenstein-inspired first-person shooter built in **Python** using **Pygame**, featuring a real-time **raycasting engine**, **AI-controlled enemies**, shortest-path navigation (A*/grid pathfinding), and gameplay balancing (spawn control to avoid overwhelming the player).
+A DOOM/Wolfenstein-inspired first-person shooter built in **Python** using **Pygame**, featuring a real-time **raycasting engine**, **AI-controlled enemies**, shortest-path navigation (breadth-first search on the map grid), and gameplay balancing (spawn control to avoid overwhelming the player).
 
 🎮 **Play / Download (Windows build):** https://vishalkrishna.itch.io/combat
 
@@ -13,7 +19,7 @@ A DOOM/Wolfenstein-inspired first-person shooter built in **Python** using **Pyg
 
 # Combat — DOOM-Style AI FPS Game (Python + Pygame)
 
-A high-performance DOOM-style first-person shooter built in **Python** using **Pygame**, featuring **real-time ray-casting**, **AI-driven enemies**, **shortest-path navigation**, and **dynamic spawn balancing**.
+A DOOM-style first-person shooter built in **Python** using **Pygame**, featuring **real-time ray-casting**, **AI-driven enemies**, **shortest-path navigation**, and **dynamic spawn balancing**.
 
 🎮 **Play / Download (Windows Build):**  
 https://vishalkrishna.itch.io/combat
@@ -30,7 +36,7 @@ https://vishalkrishna.itch.io/combat
 - Mini-map with player and enemy tracking  
 
 ### 🤖 Enemy AI & Game Balancing
-- Enemies navigate the map using **shortest-path algorithms (A* pathfinding)**  
+- Enemies navigate the map using **breadth-first search on the map grid**  
 - AI enemies actively **hunt and engage** the player  
 - Dynamic spawn balancing prevents too many enemies appearing at once  
 - Real-time enemy movement and combat updates  
@@ -133,7 +139,7 @@ The game renders a 3D-like world by casting rays from the player’s viewpoint a
 
 Enemy Pathfinding
 
-Enemies use grid-based shortest-path algorithms (A*) to:
+Enemies use breadth-first search on the map grid to:
 
 Navigate around walls
 
